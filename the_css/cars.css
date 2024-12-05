@@ -1,0 +1,231 @@
+:root{
+    --main-color:rgb(200 0 0)
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ccc;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* so smll screan */
+@media (min-width: 440px) {
+    .container{
+        width: 400px;
+    }
+}
+/* smll screan */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* medium screan */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+/* large screan */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+header{
+    background-image: linear-gradient(to bottom,black 70%,#ccc, black);
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container img{
+    height: 120px;
+    margin-bottom: 45px;
+}
+header .container nav ul{
+    display: flex;
+    gap: 30px;
+}
+@media (max-width: 767px) {
+    header .container nav ul{
+        display: none;
+    }
+}
+header .container nav ul li{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+header .container nav ul li:hover{
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+}
+header .container nav ul li:hover a{
+    color: var(--main-color);
+}
+header .container nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+header .container i{
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+@media (max-width: 768px) {
+    header .container i{
+        display: block;
+    }
+}
+header .container i:hover + ul{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 120px;
+    width: 100%;
+    background-color: rgb(200 0 0 / 40%);
+}
+header .container i:hover + ul li{
+    border: none;
+}
+.landing{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+.landing .text h2{
+    color: var(--main-color);
+    margin-bottom: 30px;
+    font-size: 35px;
+    text-align: center;
+}
+.landing .text p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* srtar the main list for all content */
+.start{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.start .container{
+    text-align: center;
+}
+.start .container .content{
+    border-bottom: 2px solid var(--main-color);
+    padding: 30px;
+    margin-top: 20px;
+}
+.start .container .content span{
+    font-size: 50px;
+    position: relative;
+    left: -254px;
+    top: -29px;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    padding: 0 20px;
+}
+.start img{
+    height: 400px;
+    box-shadow: 0 0 20px 20px black;
+}
+.start .options{
+    padding: 30px;
+}
+.start .options ul li{
+    padding: 5px;
+}
+.start .options ul li input[type="submit"]{
+    width: 464px;
+    padding: 10px;
+    background-color: #ccc;
+    font-size: 20px;
+}
+@media (max-width: 768px) {
+    .start img{
+        height: 200px;
+    }
+    .start .options ul li input[type="submit"]{
+        width: 230px;
+    }
+    .start .container .content span{
+        left: 0;
+        top: -15px;
+    }
+}
+
+.footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: linear-gradient(to top, black 90%, #ccc);
+}
+.footer .container{
+    text-align: center;
+}
+.footer .container img{
+    height: 150px;
+}
+.footer .container .social-icons i{
+    color: var(--main-color);
+    padding: 18px;
+    font-size: 20px;
+    padding-top: 0;
+}
+.footer p{
+    color: white;
+    margin-top: 10px;
+}
+.footer p span{
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.popup{
+    width: 500px;
+    height: 280px;
+    background-color: #eee;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 315px;
+    display: none;
+}
+
+.result{
+    margin: 100px;
+    font-size: 25px;
+}
+
+.popup button{
+    width: 200px;
+    padding: 10px;
+    background-color: #ccc;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    border-radius: 3px;
+}
